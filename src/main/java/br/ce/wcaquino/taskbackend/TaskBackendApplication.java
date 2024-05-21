@@ -12,8 +12,4 @@ public class TaskBackendApplication extends SpringBootServletInitializer {
 		SpringApplication.run(TaskBackendApplication.class, args);
 	}
 
-	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(TaskBackendApplication.class);
-	}
 }
