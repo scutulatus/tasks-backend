@@ -12,5 +12,13 @@ pipeline {
                 echo 'scutulatus'
             }
         }
+        stage('Test'){
+            steps{
+                sh '''
+                mvn tests
+                '''
+                echo 'Test'
+            }
+        }
     }
 }
