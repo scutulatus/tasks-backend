@@ -1,8 +1,14 @@
 pipeline {
     agent any
+    tools {
+        maven 'maven'
+    }
     stages {
-        stage('Passo 1'){
+        stage('Build'){
             steps{
+                sh '''
+                mvn package -DskipTests
+                '''
                 echo 'scutulatus'
             }
         }
