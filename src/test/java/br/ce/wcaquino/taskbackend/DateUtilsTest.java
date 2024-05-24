@@ -25,4 +25,11 @@ public class DateUtilsTest {
         assertTrue(result);
     }
     
+    @Test
+    public void isEquals(){
+        LocalDate equal = LocalDate.now();
+        boolean result = DateUtils.isEqualOrFutureDate(equal);
+        assertTrue(result);
+    }
+
 }
