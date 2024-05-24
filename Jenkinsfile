@@ -46,8 +46,11 @@ pipeline {
             }
         }
         stage('Clean'){
-            steps{
-                sh 'docker stop tasks'
+            steps {
+                catchError(buildResult: 'SUCCESS', message: 'Falhou') {
+                    sh 'docker stop tasks'// some block
+                }
+                
             }
         }
     }
