@@ -7,7 +7,7 @@ pipeline {
         stage('Build'){
             steps{
                 sh '''
-                mvn package -DskipTests
+                mvn clean package -DskipTests
                 '''
                 echo 'scutulatus'
             }
@@ -15,7 +15,7 @@ pipeline {
         stage('Test'){
             steps{
                 sh '''
-                mvn tests
+                mvn test
                 '''
                 echo 'Test'
             }
