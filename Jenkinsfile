@@ -60,7 +60,7 @@ pipeline {
         }
         stage('Check'){
             steps{
-                sleep 15
+                sleep 20
                 sh 'curl -I http://172.17.0.1:8001:8001/todo'
             }
         }
